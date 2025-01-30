@@ -1,0 +1,479 @@
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 5.6px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition: top 0.3s, background 0.3s;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    padding: 20px 0;
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #b6b6b6;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#the {
+    font-size: 3rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: -63px; /* Adjust this value to position "THE" above the "O" */
+    left: 55px
+}
+
+#coldplay {
+    font-size: 8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    margin: 0; /* Remove default margin */
+}
+
+#experience {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: -63px; /* Adjust this value to position "EXPERIENCE" below "LAY" */
+    left: 340px
+}
+
+.mute-unmute-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(107, 107, 107, 0.153);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mute-unmute-btn:hover {
+    background-color: rgba(255, 255, 255, 0.214);
+}
+/* About Us Section */
+/* About Us Section */
+.about-us {
+    background-color: #f5ffff;
+    color: black;
+    padding-bottom: 70px; /* Reduced padding to minimize empty space */
+    position: relative; /* Ensure the section is a positioning context */
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* Make the container a positioning context */
+    z-index: 1; /* Ensure text is above the image */
+}
+
+.about-content {
+    max-width: 60%; /* Adjust this value to control the width of the text */
+}
+
+.about-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align text to the left */
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left */
+}
+
+#bandpic {
+    position: absolute; /* Position the image absolutely */
+    right: -170px; /* Align to the right wall */
+    bottom: -70px; /* Stick to the bottom of the section */
+    width: auto; /* Adjust this value to control the width of the image */
+    height: 22.4rem;
+    border-radius: 10px;
+    z-index: -1; /* Place the image behind the text */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Members Section */
+.members {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 80px 0; /* Increased padding for spacing */
+    position: relative; /* Make the section a positioning context */
+    overflow: hidden; /* Hide overflow from the rotated header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center; /* Align cards and header vertically */
+    position: relative; /* Make the container a positioning context */
+}
+
+.members-header {
+    font-size: 8.29rem; /* Large font size */
+    transform: rotate(-90deg);
+    color: rgba(0, 0, 0, 0.6); /* Light color for the background header */
+    position: absolute;
+    top: 20%; /* Center vertically */
+    right: 72%;
+    z-index: 0; /* Place the header behind the cards */
+}
+
+.content {
+    display: flex;
+    gap: 30px; /* Gap between cards */
+    margin-left: 136px; /* Shift cards to the left */
+    position: relative; /* Ensure cards are above the header */
+    z-index: 1; /* Ensure cards are above the header */
+}
+
+.card {
+    width: 200px; /* Card width */
+    height: 500px; /* Increased height */
+    background: white;
+    padding: 20px; /* Padding inside the card */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+/* Stagger the cards alternately up and down */
+.card:nth-child(odd) {
+    margin-top: -30px; /* Move odd cards up */
+}
+
+.card:nth-child(even) {
+    margin-top: 30px; /* Move even cards down */
+}
+
+.card img {
+    width: 100%;
+    height: 85%; /* Larger image height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 0; /* Remove default margin */
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Albums Section */
+.albums {
+    background-image: url('resource/background_stadium.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.albums::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+    backdrop-filter: blur(8px); /* Subtle blur effect */
+    z-index: 0;
+}
+
+.albums h2 {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    left: 50px;
+    bottom: 6px;
+    z-index: 1;
+    font-family: 'Lora', serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.container {
+    max-width: 100%; /* Full width */
+    padding: 0 60px; /* Minimal padding on sides */
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 23px;
+    padding: 20px 0; /* Padding only top and bottom */
+    position: relative;
+    left: 150px;
+    z-index: 1;
+    width: 55rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 6px; /* Smaller scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #ffdc62; /* Yellow scrollbar thumb */
+    border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Translucent track */
+}
+
+.album-card {
+    width: 200px; /* Uniform width */
+    height: 300px; /* Uniform height */
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.album-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.album-card img {
+    width: 170px;
+    height: 170px; /* Fixed height for square images */
+    object-fit: cover; /* Ensure the image fills the square */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    aspect-ratio: 1 / 1; /* Force square aspect ratio */
+}
+
+.album-card h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.album-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+.album-card .listen-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ffdc62; /* Yellow button */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+
+.album-card .listen-link:hover {
+    background-color: #ffc107; /* Darker yellow on hover */
+}
+
+/* Tour Section */
+.tour {
+    background-color: #1a1a1a;
+    padding: 100px 0;
+}
+
+.tour h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tour-dates {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.date-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.date-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.date-card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.date-card p {
+    font-size: 1rem;
+    margin: 8px 0 0;
+    color: #666;
+}
+
+.buy-ticket {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffdc62;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-ticket:hover {
+    background-color: #ffc107;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffdc62;
+}
+
